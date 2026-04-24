@@ -760,13 +760,26 @@ Please let me know the process further.`;
             }, 1000);
         }
 const furnitureGallery = [
-    { src: 'img/work1.jpg', title: 'Royal Teak Sofa' },
-    { src: 'img/work2.jpg', title: 'Modern King Bed' },
-    { src: 'img/work3.jpg', title: 'Luxury Dining' },
-       { src: 'img/work4.jpg', title: 'Royal Teak Sofa' },
-    { src: 'img/work5.jpg', title: 'Modern King Bed' },
-    { src: 'img/work6.jpg', title: 'Luxury Dining' },
-    // ... add all 20 image paths here
+  { src: 'img/1.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/2.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/3.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/4.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/5.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/6.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/7.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/8.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/9.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/10.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/11.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/12.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/13.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/14.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/15.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/16.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/17.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/18.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/19.jpeg', title: 'Luxury Sofa' },
+    { src: 'img/20.jpeg', title: 'Luxury Sofa' }
 ];
 
 function initShowroom() {
@@ -792,13 +805,17 @@ function initShowroom() {
 }
 
 function switchView(index) {
-    // Reset actives
+    // Reset active states
     document.querySelectorAll('.main-display img').forEach(img => img.classList.remove('active'));
     document.querySelectorAll('.thumb-item').forEach(th => th.classList.remove('active'));
 
-    // Set new active
-    document.getElementById(`view-${index}`).classList.add('active');
+    // Set new active image
+    const activeImg = document.getElementById(`view-${index}`);
+    activeImg.classList.add('active');
     document.querySelectorAll('.thumb-item')[index].classList.add('active');
+    
+    // Update the subtitle text to the item's title
+    document.querySelector('#gallery p').innerText = furnitureGallery[index].title;
 }
 function toggleMobileMenu() {
     document.getElementById('mobileMenu').classList.toggle('active');
