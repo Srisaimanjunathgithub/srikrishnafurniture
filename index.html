@@ -6,6 +6,82 @@
     <title>Sri Krishna Furniture</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
+        /* --- MODERN WHY SK SECTION --- */
+.why-sk-section {
+    padding: 80px 8%;
+    background: #fff;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08);
+    border-color: var(--primary-blue);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-red);
+    transform: scaleY(0);
+    transition: 0.3s;
+}
+
+.feature-card:hover::before {
+    transform: scaleY(1);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #fdf2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover .icon-box {
+    background: var(--accent-red);
+    color: white;
+}
+
+.feature-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
    /* --- CINEMATIC SHOWROOM SECTION --- */
 .showroom-container {
     padding: 60px 8%;
@@ -349,6 +425,7 @@
             <li><a href="#" style="font-size: 13px;">Home</a></li>
             <li><a href="#gallery" style="font-size: 13px;">Products</a></li>
             <li><a href="#booking" style="font-size: 13px;">Contact</a></li>
+            <li><a href="#why-sk" style="scroll-behavior: smooth;">Why SK Furniture?</a></li>
             <li><a href="#ai-designer" class="nav-ai-link" style="font-size: 12px; padding: 4px 12px;">SK Furniture AI Consultant</a></li>
         </ul>
     </nav>
@@ -399,6 +476,7 @@
                 
         </button>
     </div>
+   
 <section id="booking" style="padding: 80px 8%; background: #fdfdfd; text-align: center;">
     <h2 style="color: var(--primary-blue);">QUICK <span style="color: var(--accent-red);">WHATSAPP</span> INQUIRY</h2>
     <p style="color: #666; margin-bottom: 30px;">Tap to select your needs and start a chat.</p>
@@ -450,19 +528,50 @@
         <button class="btn-red" onclick="window.location.href='#booking'">Enquire About This Design</button>
     </div>
 </section>
-    <h2 style="text-align: center; color: var(--primary-blue); margin-bottom: 40px;">OUR <span style="color: var(--accent-red);">RECENT WORKS</span></h2>
-    
-    <div class="slider-container">
-        <div class="product-card"><img src="img/gallary/work1.jpg" ><div class="product-info"></div></div>
-        <div class="product-card"><img src="img/gallary/work2.jpg" ><div class="product-info"></div></div>
-        <div class="product-card"><img src="img/gallary/work3.jpg" ><div class="product-info"></div></div>
-        <div class="product-card"><img src="img/gallary/work4.jpg"><div class="product-info"></div></div>
-        <div class="product-card"><img src="img/gallary/work5.jpg"><div class="product-info"></div></div>
-        <div class="product-card"><img src="img/gallary/work6.jpg"><div class="product-info"></div></div>
+  
+</section>
+<section id="why-sk" class="why-sk-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 36px; color: var(--primary-blue);">WHY <span style="color: var(--accent-red);">SRI KRISHNA?</span></h2>
+        <p style="margin-top: 15px; color: #777;">We don't just sell furniture; we protect your hard-earned money by eliminating the "Showroom Middleman" and focusing on pure craftsmanship.</p>
     </div>
 
-    <div style="text-align: center; margin-top: 30px;">
-        <p style="font-size: 13px; color: #777;">(Hover to pause / Swipe to view all 50+ designs in our showroom)</p>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon-box">🛡️</div>
+            <h4>Seasoned Teak Only</h4>
+            <p>Unlike showrooms that use 'commercial' mix-wood, we use 100% seasoned Teak and Hardwood that won't warp or crack for decades.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">☁️</div>
+            <h4>40-Density Comfort</h4>
+            <p>We use High-Resilience (HR) Sleepwell foam. It maintains its bounce and shape even after 10 years of heavy daily use.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">💰</div>
+            <h4>Direct Factory Price</h4>
+            <p>You pay for the wood and the work, not the expensive showroom rent and sales commissions. Save up to 40% on luxury designs.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">📐</div>
+            <h4>Millimeter Precision</h4>
+            <p>Standard furniture leaves gaps. We measure your room and customize every inch so the furniture looks like it was born in your home.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">🔍</div>
+            <h4>Open-Workshop Policy</h4>
+            <p>We invite you to visit our workshop while your sofa is being built. See the raw wood and foam yourself before we cover it with fabric.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">🤝</div>
+            <h4>Personalized Service</h4>
+            <p>No customer care bots. You talk directly to Murthy Yadav. If there's an issue, we fix it within 48 hours. Guaranteed.</p>
+        </div>
     </div>
 </section>
     <footer style="padding: 40px 8%; text-align: center; border-top: 1px solid #eee;">
@@ -608,6 +717,9 @@ const furnitureGallery = [
     { src: 'img/work1.jpg', title: 'Royal Teak Sofa' },
     { src: 'img/work2.jpg', title: 'Modern King Bed' },
     { src: 'img/work3.jpg', title: 'Luxury Dining' },
+       { src: 'img/work4.jpg', title: 'Royal Teak Sofa' },
+    { src: 'img/work5.jpg', title: 'Modern King Bed' },
+    { src: 'img/work6.jpg', title: 'Luxury Dining' },
     // ... add all 20 image paths here
 ];
 
