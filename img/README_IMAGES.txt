@@ -1,0 +1,1 @@
+Place your logo.png and favicon.png files in this folder.
