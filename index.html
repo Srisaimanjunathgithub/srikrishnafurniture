@@ -209,27 +209,33 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', 'Noto Sans Kannada', 'Noto Sans Telugu', sans-serif; }
         html { scroll-behavior: smooth; }
 
-       /* Show Language Options on Mobile */
+      /* Fix: Show Language and Contact together on Mobile */
     .lang-switch { 
         display: flex !important; 
-        justify-content: center !important; 
-        padding: 5px 0 !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
+        padding: 5px 5% !important;
         height: auto !important;
-        background: #f0f0f0 !important;
+        background: #f8f8f8 !important;
     }
     
     .top-contacts { 
-        display: none !important; /* Hides contact text to keep the bar thin */
+        display: flex !important; 
+        gap: 12px !important;
     }
+
+    /* Hide text on mobile to show only icons for a cleaner look */
+    .contact-link { font-size: 0 !important; } 
+    .contact-link svg { width: 18px !important; height: 18px !important; }
 
     .lang-btns {
         display: flex !important;
-        gap: 15px !important;
+        gap: 10px !important;
     }
 
     .lang-btn {
-        font-size: 12px !important;
-        padding: 5px 10px !important;
+        font-size: 11px !important;
+        padding: 2px 5px !important;
     }
 
         /* --- TICKER BANNER --- */
